@@ -23,13 +23,11 @@ To utilize this repository, Python is required. The provided `data_parser.py` sc
 
     ```
     git clone https://github.com/eneko98/RAE-Corpus.git
-
     ```
 
 2. Navigate to the repository directory:
     ```
     cd RAE-Corpus
-
     ```
 
 3. Modify the `data_parser.py` script to include the correct file paths for your system. This involves setting the path to the `RealAcademiaEspanola-DiccionarioLlenguaEspanola.txt` file and specifying the output path for the `rae_dictionary.json` file.
@@ -37,7 +35,7 @@ To utilize this repository, Python is required. The provided `data_parser.py` sc
     ```
     python data_parser.py
     ```
-    
+
 ## Contributing
 
 Contributions to the RAE Spanish Dictionary Corpus are welcome! Please feel free to fork the repository, make changes, and submit pull requests.
