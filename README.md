@@ -1,12 +1,12 @@
 # RAE Spanish Dictionary Corpus
 
-This repository houses a corpus derived from the Real Academia Española's "Diccionario de la Lengua Española", based on the comprehensive resources available at [https://dle.rae.es/](https://dle.rae.es/). It features the original text file of the dictionary, a Python script for parsing the text, and the resulting corpus in JSON format. With a total of 85,811 words, this corpus stands as a robust resource for various computational linguistics and machine learning tasks, especially for those focused on the Spanish language.
+This repository houses a corpus derived from the Real Academia Española's "Diccionario de la Lengua Española", based on the comprehensive resources available at [https://dle.rae.es/](https://dle.rae.es/). It features the original text file of the dictionary, a Python script for parsing the text, and the resulting corpus in JSON format. Each entry in the corpus contains the word, various metadata that can be useful for fine-tuning, and one or more definitions, making this corpus a robust resource for various computational linguistics and machine learning tasks, especially for those focused on the Spanish language. With a total of 85,811 words, the corpus is extensive and detailed, facilitating a wide range of research and application possibilities.
 
 ## Contents
 
 - `RealAcademiaEspanola-DiccionarioLlenguaEspanola.txt` - The original text file of the "Diccionario de la Lengua Española" by the Real Academia Española (RAE).
-- `data_parser.py` - A Python script utilized to extract information from the original text file and format it into a structured JSON corpus.
-- `rae_dictionary.json` - The JSON format corpus generated from the original dictionary text, encapsulating the extensive vocabulary of the Spanish language as documented by the RAE.
+- `data_parser.py` - A Python script utilized to extract information from the original text file and format it into a structured JSON corpus. This script processes each entry to include the word, its relevant metadata, and definitions in the JSON format.
+- `rae_dictionary.json` - The JSON format corpus generated from the original dictionary text, encapsulating the extensive vocabulary of the Spanish language as documented by the RAE. The corpus includes detailed entries for each word, incorporating metadata and definitions to support a variety of NLP tasks.
 
 ## Getting Started
 
