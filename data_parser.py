@@ -1,18 +1,14 @@
 import json
 import re
 
-#You will need to add your own paths
+#You might need to add your own paths
 
-file_path = ''
-
-with open(file_path, 'r', encoding='utf-8') as file:
-    dictionary_text = file.read()
+input_file_path = 'RealAcademiaEspanola-DiccionarioLlenguaEspanola.txt'
+output_file_path = 'rae_dictionary.json'
 
 def parse_rae_dictionary(text):
     text = re.sub(r'^[A-Z]\n+\w+\s*—\s*\w+\n+', '', text, flags=re.MULTILINE)
-
     entry_pattern = re.compile(r'->(.*?)(?=->|\Z)', re.DOTALL)
-
     entries = entry_pattern.findall(text)
 
     processed_entries = []
@@ -34,7 +30,7 @@ def parse_rae_dictionary(text):
             if word or metadata or cleaned_definitions:
                 entry_data.append({
                     'word': word,
-                    'metadata': metadata,
+                    'metadata': metadata or [],
                     'definitions': cleaned_definitions
                 })
 
@@ -43,7 +39,10 @@ def parse_rae_dictionary(text):
 
     return processed_entries
 
+with open(input_file_path, 'r', encoding='utf-8') as file:
+    dictionary_text = file.read()
+
 parsed_data = parse_rae_dictionary(dictionary_text)
 
-with open('', 'w', encoding='utf-8') as json_file:
+with open(output_file_path, 'w', encoding='utf-8') as json_file:
     json.dump(parsed_data, json_file, ensure_ascii=False, indent=4)
